@@ -10,11 +10,11 @@ class Stack:
     def push(self,val):
         self.items.append(val)
         
-    def isEmpty():
+    def isEmpty(self):
         return len(self.items)==0
     
     def pop(self):
-        if isEmpty():
+        if self.isEmpty():
             raise RuntimeError("Trying to pop an empty stack")
         
         topindex=len(self.items)-1
@@ -23,7 +23,7 @@ class Stack:
         return pop
     
     def top(self):
-        if isEmpty():
+        if self.isEmpty():
             raise RuntimeError("Trying to reach the top of an empty stack")        
         
         return self.items[len(self.items)-1]
